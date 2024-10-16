@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prashamsa Koirala's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="text">
+                <h1 id="animatedText">Hi! I'm <br> Prashamsa</h1>
+              </div> 
+              <div class = "paragraphtext">
+                <p>Third-year studying Electrical Engineering & CS @ Duke. I'm interested in software engineering, hardware design, and financial tech. </p> 
+            </div>
+            <img src = "../images/face.png"/>
+        </section>
+
+
+        <section id="skills"> 
+            <h1 id="skillstext">Skills</h1>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fab fa-java"></i>
+                    <p>Java</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <p>SQL</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-c"></i>
+                    <p>C/C++</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="cardscontainer"></div>
+        </section>
+
+        <script>
+            const carddata = [
+                {
+                    "projecttitle": "GreenBasket",
+                    "cardtext": "Web app which lets users search for food products, access sustainability information, view carbon emissions distributions, and discover similar products based on EcoScores from Open Food Facts.",
+                    "keystack": "MongoDB, Vercel, Auth0, Bootstrap, FastAPI, Python, UVicorn, Chart.js",
+                    "projectType": "cs"
+                },
+                {
+                    "projecttitle": "Library Book Notification System",
+                    "cardtext": "Wireless notification system that alerts Duke Librarians when campus book drop-off stations reach capacity.",
+                    "keystack": "C++, Arduino, ESP-8266 Wifi Module",
+                    "projectType": "engineering"
+                },
+                {
+                    "projecttitle": "Handbell Choir Device",
+                    "cardtext": "Device that helps handbell choir members by giving them gentle vibrations as cues during their performances.",
+                    "keystack": "C++, Arduino, X-Bee, Solidworks",
+                    "projectType": "engineering"
+                },
+                {
+                    "projecttitle": "Loreto Malaria Dashboard",
+                    "cardtext": "Interactive platform for Duke researchers to analyze and visualize large malaria and climate datasets in Loreto, Peru.",
+                    "keystack": "Python, Pandas, Geopandas, Holoviews",
+                    "projectType": "cs"
+                }
+            ];
+
+            const cardscontainer = document.querySelector(".cardscontainer");
+
+            const createPost = (data) => {
+                const { projecttitle, cardtext, keystack, projectType } = data;
+
+                const post = document.createElement("div");
+                const cardClass = projectType === "cs" ? "card card--dark" : "card";
+                
+                post.className = "card-container";
+                post.innerHTML = `
+                    <div class="${cardClass}">
+                        <a href="#">
+                            <div class="card--display">
+                                <h2>${projecttitle}</h2>
+                            </div>
+                            <div class="card--hover">
+                                <h2>${projecttitle}</h2>
+                                <p>${cardtext}</p>
+                                <p><b>Tools:</b> <i>${keystack}</i><p>
+                                <p class="link">Click to see project</p>
+                            </div>
+                        </a>
+                        <div class="card--border"></div>
+                    </div>
+                `;
+
+                cardscontainer.append(post);
+            };
+
+            carddata.forEach(createPost);
+        </script>
+
+</body>
+
+</html>
