@@ -24,12 +24,12 @@
         <section id="home">
             <div class="text">
                 <h1 id="animatedText">Hi! I'm <br> Prashamsa</h1>
-              </div> 
-              <div class = "paragraphtext">
-                <p>Third-year studying Electrical Engineering & CS @ Duke. I'm interested in software engineering, hardware design, and financial tech. </p> 
+            </div> 
+            <img src="../images/face.png" />
+            <div class="paragraphtext">
+                <p>Third-year studying Electrical Engineering & CS @ Duke. I'm interested in software engineering, hardware design, and financial tech.</p>
             </div>
-            <img src = "../images/face.png"/>
-        </section>
+        </section>             
 
 
         <section id="skills"> 
@@ -74,9 +74,39 @@
         <script>
             const carddata = [
                 {
+                    "projecttitle": "Bazaar",
+                    "cardtext": "Turn-based multiplayer trading game where players collect and trade colored pebbles to purchase cards and score points, aiming to have the highest score by the end of the game.",
+                    "keystack": "Java, JavaFX, OOP, Agile, IntelliJ, Gradle, Maven, JUnit",
+                    "projectType": "cs"
+                },
+                {
+                    "projecttitle": "AI Bird Detector",
+                    "cardtext": "Machine learning model that classifies bird species from audio clips by converting bird calls into Mel spectrograms and training neural networks to streamline biodiversity monitoring and conservation efforts in Mengla County, China.",
+                    "keystack": "Python, Librosa, PyTorch, Deep Learning, 2-D Convolution",
+                    "projectType": "cs"
+                },
+                {
+                    "projecttitle": "MATLAB Geophone Parameter Simulation",
+                    "cardtext": "Monte Carlo simulation in MATLAB that models geophone parameters using real ground motion data from the 2015 Gorkha earthquake.",
+                    "keystack": "MATLAB",
+                    "projectType": "engineering"
+                },
+                {
+                    "projecttitle": "KTMGeoLab Printed Circuit Board Redesign",
+                    "cardtext": "Redesigned PCB that connects geophones to ADS1256 and ESP32, optimizing it for sensing and calibration modes while addressing major design flaws from earlier versions.",
+                    "keystack": "KiCAD",
+                    "projectType": "engineering"
+                },
+                {
                     "projecttitle": "GreenBasket",
                     "cardtext": "Web app which lets users search for food products, access sustainability information, view carbon emissions distributions, and discover similar products based on EcoScores from Open Food Facts.",
                     "keystack": "MongoDB, Vercel, Auth0, Bootstrap, FastAPI, Python, UVicorn, Chart.js",
+                    "projectType": "cs"
+                },
+                {
+                    "projecttitle": "Loreto Malaria Dashboard",
+                    "cardtext": "Interactive platform for Duke researchers to analyze and visualize large malaria and climate datasets in Loreto, Peru.",
+                    "keystack": "Python, Pandas, Geopandas, Holoviews",
                     "projectType": "cs"
                 },
                 {
@@ -90,12 +120,6 @@
                     "cardtext": "Device that helps handbell choir members by giving them gentle vibrations as cues during their performances.",
                     "keystack": "C++, Arduino, X-Bee, Solidworks",
                     "projectType": "engineering"
-                },
-                {
-                    "projecttitle": "Loreto Malaria Dashboard",
-                    "cardtext": "Interactive platform for Duke researchers to analyze and visualize large malaria and climate datasets in Loreto, Peru.",
-                    "keystack": "Python, Pandas, Geopandas, Holoviews",
-                    "projectType": "cs"
                 }
             ];
 
@@ -118,7 +142,7 @@
                                 <h2>${projecttitle}</h2>
                                 <p>${cardtext}</p>
                                 <p><b>Tools:</b> <i>${keystack}</i><p>
-                                <p class="link">Click to see project</p>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
                         </a>
                         <div class="card--border"></div>

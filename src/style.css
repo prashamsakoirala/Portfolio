@@ -8,6 +8,7 @@
   }
 
 
+
 header {
     top: 0;
     width: 100%;
@@ -74,25 +75,29 @@ body {
 
 #home {
     margin-top: 12%;
-    margin-left: 20%;
-    text-align: left;
     margin-bottom: 5%;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items at the start */
+}
+
+#home .text {
+    width: 60%; /* Take up 60% of the space for text */
 }
 
 #home img {
     border: 12px solid #5bc0eb; 
     border-radius: 50%; 
-    max-width: 300px;
-    display: inline-flex;
-    align-items: right;
+    max-width: 300px; 
+    margin-left: 20px; /* Optional: Adjust margin to create space */
 }
 
-  #home .paragraphtext {
-    text-align: left;
-    width: 40%;
-    margin: 2rem;
-    font-size: x-large;
-   }
+#home .paragraphtext {
+    text-align: left; /* Ensure text is left-aligned */
+    font-size: x-large; /* Keep this line */
+}
+
+
 
   .text {
     max-width: 30rem;
@@ -185,8 +190,6 @@ body {
     align-items: center;
     text-align: left;
     width: 300px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
     height: 500px;
     flex: 0 0 auto;            
 }
@@ -244,6 +247,10 @@ body {
 .card--hover p {
     font-weight: normal;
     line-height: 1.5;
+}
+
+.card--hover .fa-solid {
+    font-size: 1.7em;
 }
 
 .card--hover .link {
