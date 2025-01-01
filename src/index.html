@@ -17,6 +17,28 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
+            <div class = "nav-links">
+                <div class = "icons">
+                    <button  class="my-button" href="">Resume / CV</button>
+                <div class="tooltip">
+                    <a href="https://www.linkedin.com/in/prashamsa-koirala-01091b218" target="_blank" class="custom-tooltip">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="tooltip">  
+                    <a href="mailto:prashamsa.koirala@duke.edu" target="_blank" class="custom-tooltip">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="tooltip">  
+                    <a href="https://github.com/prashamsakoirala" target="_blank" class="custom-tooltip">
+                        <i class="fa-brands fa-gitlab"></i>
+                    </a>
+                </div>
+            </div>
+            </div> 
         </nav>
     </header>
 
@@ -24,12 +46,10 @@
         <section id="home">
             <div class="text">
                 <h1 id="animatedText">Hi! I'm <br> Prashamsa</h1>
+                <p> Passionate student and designer with a love for solving real-world problems through innovative technology. I have experience working on projects involving IoT, machine learning, and software design. My goal is to create solutions that make a positive impact on the world!</p>
             </div> 
             <img src="../images/face.png" />
-            <div class="paragraphtext">
-                <p>Third-year studying Electrical Engineering & CS @ Duke. I'm interested in software engineering, hardware design, and financial tech.</p>
-            </div>
-        </section>             
+        </section>      
 
 
         <section id="skills"> 
@@ -68,11 +88,11 @@
 
         <section id="projects">
             <h1>Projects</h1>
-            <div class="htmllinkcards">
-                <a href="projectscs.html"><div class="cscard"><h3>Computer Science Projects</h3></div></a>
-                <a href="projectseng.html"><div class="engcard"><h3>Engineering Projects</h3></div></a>
-            </div>
             <div class="cardscontainer"></div>
+
+        <section id="passion">
+            <h1>Other</h1>
+            <div class="cardscontainer"></div>    
 
         <script>
             const carddata = [
@@ -129,33 +149,42 @@
             const cardscontainer = document.querySelector(".cardscontainer");
 
             const createPost = (data) => {
-                const { projecttitle, cardtext, keystack, projectType } = data;
+            const { projecttitle, cardtext, keystack, projectType } = data;
+            
+            const post = document.createElement("div");
+            const cardClass = projectType === "cs" ? "card card--dark" : "card";
+            
+            post.className = "card-container";
+            post.innerHTML = `
+                <div class="${cardClass}">
+                    <a href="projects.html?project=${encodeURIComponent(projecttitle)}">
+                        <div class="card--display">
+                            <h2>${projecttitle}</h2>
+                        </div>
+                        <div class="card--hover">
+                            <h2>${projecttitle}</h2>
+                            <p>${cardtext}</p>
+                            <p><b>Tools:</b> <i>${keystack}</i><p>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </a>
+                    <div class="card--border"></div>
+                </div>
+            `;
 
-                const post = document.createElement("div");
-                const cardClass = projectType === "cs" ? "card card--dark" : "card";
-                
-                post.className = "card-container";
-                post.innerHTML = `
-                    <div class="${cardClass}">
-                        <a href="#">
-                            <div class="card--display">
-                                <h2>${projecttitle}</h2>
-                            </div>
-                            <div class="card--hover">
-                                <h2>${projecttitle}</h2>
-                                <p>${cardtext}</p>
-                                <p><b>Tools:</b> <i>${keystack}</i><p>
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </div>
-                        </a>
-                        <div class="card--border"></div>
-                    </div>
-                `;
-
-                cardscontainer.append(post);
-            };
+            cardscontainer.append(post);
+        };
 
             carddata.forEach(createPost);
+
+            AOS.init({
+            duration: 1000,
+            offset: 120, 
+            once: true 
+            });
+
+            
+
         </script>
 
 </body>

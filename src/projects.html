@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #808080;
+  text-decoration: none;
+  z-index: 999;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.back-arrow {
+    color: #5bc0eb;
+}
+
+#main {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100vh;
+}
+
+.project {
+  flex: 0 0 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  overflow-y: auto;
+  height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.project-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project.cs {
+  background-color: black;
+  color: white;
+}
+
+.project.engineering {
+  background-color: white;
+  color: black;
+}
+
+.project h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.project p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.project img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #808080;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 998;
+  transition: color 0.3s ease;
+  padding: 20px;
+}
+
+.nav-arrow:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-arrow {
+  left: 20px;
+}
+
+.next-arrow {
+  right: 20px;
+}
+
+.slide-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 998;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #808080;
+}
+
+.tech-stack {
+  font-size: 1em;
+  margin-top: 1em;
+  opacity: 0.8;
+}
+
+@media screen and (max-height: 450px) {
+  .back-arrow {
+    font-size: 20px;
+  }
+}
+
+.project::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+}
+
+.project.cs::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+</style>
+</head>
+<body>
+<a href="index.html" class="back-arrow">←</a>
+<button class="nav-arrow prev-arrow" onclick="navigate(-1)">❮</button>
+<button class="nav-arrow next-arrow" onclick="navigate(1)">❯</button>
+
+<div id="main">
+  <div class="project cs">
+    <div class="project-content">
+      <h1>Bazaar</h1>
+      <p>Turn-based multiplayer trading game where players collect and trade colored pebbles to purchase cards and score points, aiming to have the highest score by the end of the game.</p>
+      <div class="tech-stack">Java, JavaFX, OOP, Agile, IntelliJ, Gradle, Maven, JUnit</div>
+      <img src="project1.png" alt="Bazaar Images">
+    </div>
+  </div>
+
+  <div class="project cs">
+    <div class="project-content">
+      <h1>AI Bird Detector</h1>
+      <p>Machine learning model that classifies bird species from audio clips by converting bird calls into Mel spectrograms and training neural networks to streamline biodiversity monitoring and conservation efforts in Mengla County, China.</p>
+      <div class="tech-stack">Python, Librosa, PyTorch, Deep Learning, 2-D Convolution</div>
+      <img src="project3.png" alt="AI Bird Detector">
+    </div>
+  </div>
+
+  <div class="project engineering">
+    <div class="project-content">
+      <h1>MATLAB Geophone Parameter Simulation</h1>
+      <p>Monte Carlo simulation in MATLAB that models geophone parameters using real ground motion data from the 2015 Gorkha earthquake.</p>
+      <div class="tech-stack">MATLAB</div>
+      <img src="project2.png" alt="MATLAB Simulation">
+    </div>
+  </div>
+
+  <div class="project engineering">
+    <div class="project-content">
+      <h1>KTMGeoLab Printed Circuit Board Redesign</h1>
+      <p>Redesigned PCB that connects geophones to ADS1256 and ESP32, optimizing it for sensing and calibration modes while addressing major design flaws from earlier versions.</p>
+      <div class="tech-stack">KiCAD</div>
+      <img src="project3.png" alt="PCB Redesign">
+    </div>
+  </div>
+
+  <div class="project cs">
+    <div class="project-content">
+      <h1>GreenBasket</h1>
+      <p>Web app which lets users search for food products, access sustainability information, view carbon emissions distributions, and discover similar products based on EcoScores from Open Food Facts.</p>
+      <div class="tech-stack">MongoDB, Vercel, Auth0, Bootstrap, FastAPI, Python, UVicorn, Chart.js</div>
+      <img src="project4.png" alt="GreenBasket">
+    </div>
+  </div>
+
+  <div class="project cs">
+    <div class="project-content">
+      <h1>Loreto Malaria Dashboard</h1>
+      <p>Interactive platform for Duke researchers to analyze and visualize large malaria and climate datasets in Loreto, Peru.</p>
+      <div class="tech-stack">Python, Pandas, Geopandas, Holoviews</div>
+      <img src="project4.png" alt="Malaria Dashboard">
+    </div>
+  </div>
+
+  <div class="project engineering">
+    <div class="project-content">
+      <h1>Library Book Notification System</h1>
+      <p>Wireless notification system that alerts Duke Librarians when campus book drop-off stations reach capacity.</p>
+      <div class="tech-stack">C++, Arduino, ESP-8266 Wifi Module</div>
+      <img src="project4.png" alt="Library Notification">
+    </div>
+  </div>
+
+  <div class="project engineering">
+    <div class="project-content">
+      <h1>Handbell Choir Device</h1>
+      <p>Device that helps handbell choir members by giving them gentle vibrations as cues during their performances.</p>
+      <div class="tech-stack">C++, Arduino, X-Bee, Solidworks</div>
+      <img src="project5.png" alt="Handbell Device">
+    </div>
+  </div>
+</div>
+
+<div class="slide-indicator"></div>
+
+<script>
+let currentSlide = 0;
+const totalSlides = document.querySelectorAll('.project').length;
+
+function navigate(direction) {
+  currentSlide = Math.max(0, Math.min(currentSlide + direction, totalSlides - 1));
+  updateSlide();
+  updateArrowVisibility();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateSlide();
+  updateArrowVisibility();
+}
+
+function updateSlide() {
+  const main = document.getElementById('main');
+  main.style.transform = `translateX(-${currentSlide * 100}vw)`;
+  updateDots();
+}
+
+function updateArrowVisibility() {
+  const prevArrow = document.querySelector('.prev-arrow');
+  const nextArrow = document.querySelector('.next-arrow');
+  const backArrow = document.querySelector('.back-arrow');
+  const currentProject = document.querySelectorAll('.project')[currentSlide];
+  
+  prevArrow.style.display = currentSlide === 0 ? 'none' : 'block';
+  nextArrow.style.display = currentSlide === totalSlides - 1 ? 'none' : 'block';
+  
+  const isCSProject = currentProject.classList.contains('cs');
+  [prevArrow, nextArrow, backArrow].forEach(arrow => {
+    if (arrow && (arrow.style.display !== 'none' || arrow.classList.contains('back-arrow'))) {
+      if (arrow.classList.contains('back-arrow')) {
+        arrow.style.color = isCSProject ? 'white' : '#808080';
+      } else {
+        arrow.onmouseover = function() {
+          this.style.color = isCSProject ? 'white' : 'black';
+        };
+        arrow.onmouseout = function() {
+          this.style.color = '#808080';
+        };
+      }
+    }
+  });
+}
+
+function createDots() {
+  const indicator = document.querySelector('.slide-indicator');
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.onclick = () => goToSlide(i);
+    indicator.appendChild(dot);
+  }
+  updateDots();
+}
+
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.className = `dot ${index === currentSlide ? 'active' : ''}`;
+  });
+}
+
+// Initialize dots and arrow visibility
+createDots();
+updateArrowVisibility();
+
+// Add keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') navigate(-1);
+  if (e.key === 'ArrowRight') navigate(1);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectTitle = urlParams.get('project');
+    
+    if (projectTitle) {
+        // Find the project data
+        const projectData = carddata.find(project => project.projecttitle === projectTitle);
+        if (projectData) {
+            // Find project index
+            const projectIndex = carddata.findIndex(project => project.projecttitle === projectTitle);
+            // Navigate to that slide
+            goToSlide(projectIndex);
+        }
+    }
+});
+</script>
+</body>
+</html>
