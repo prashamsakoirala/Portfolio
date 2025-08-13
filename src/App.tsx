@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import NavBar from './components/Navbar.tsx'
+import Home from './sections/Home.tsx'
+import Projects from './sections/Projects.tsx'
+import Experience from './sections/Experience.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <NavBar></NavBar>
+    <>
+      <NavBar></NavBar>
+      <Home></Home>
+      <Projects></Projects>
+      <Experience></Experience>
+      
+    </>
   )
 }
 
