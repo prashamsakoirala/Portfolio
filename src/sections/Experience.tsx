@@ -22,7 +22,7 @@ function Experience() {
 
     return (
         <section className="bg-black min-h-screen w-full relative">
-            <div className="bg-black text-white min-h-screen flex justify-center items-center p-8 ml-50">
+            <div className="bg-black text-white min-h-screen flex justify-center items-center p-8 ml-50 mr-50">
                 <div className="flex max-w-5xl w-full ml-16">
                     <div className="w-1/3 pr-6">
                         <div className={`transition-all duration-500 ${isTransitioning ? '-translate-x-4 opacity-0' : 'opacity-100'}`}>
