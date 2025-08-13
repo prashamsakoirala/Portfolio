@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import Headshot from '../assets/headshot.png'
 import DukeLogo from '../assets/Duke_University_logo.svg'
 import SiemensLogo from '../assets/Siemens-logo.svg'
@@ -6,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import audioFile from '../assets/prashamsa.mp3';
-import { useRef } from 'react';
+import resume from '../assets/Koirala_Resume.pdf';
 
 
 function Home() {
@@ -28,7 +29,7 @@ function Home() {
             <div className="flex flex-col gap-6 -mt-18">
               <Name></Name>
               <About></About>
-              <ExternalLinks></ExternalLinks>
+              <Links></Links>
             </div>
           </div>
         </div>
@@ -110,12 +111,12 @@ function Name() {
   }
   
 
-function  ExternalLinks() {
+function  Links() {
     return (
         <div className="text-black space-x-4 font-alexandria font-extralight space-y-2">
           <div className='text-2xl'>
-            <p className='uppercase hover:scale-105 duration-200 ease-in-out'>Resume</p>
-            <p className='uppercase hover:scale-105 duration-200 ease-in-out'>Contact</p>
+          <a target="_blank" rel="noopener noreferrer" href={resume}> <p className='uppercase hover:scale-105 duration-200 ease-in-out'>Resume</p></a>
+          <a target="_blank" rel="noopener noreferrer" href='mailto:pkoirala04@gmail.com'> <p className='uppercase hover:scale-105 duration-200 ease-in-out'>Contact</p></a>
           </div>
           <div className='flex gap-4'>
           <a className='text-4xl' target="_blank" rel="noopener noreferrer" href='https://linkedin.com/in/prashamsakoirala'><FontAwesomeIcon icon={faLinkedin} className='hover:scale-110 duration-200 ease-in-out' /></a>

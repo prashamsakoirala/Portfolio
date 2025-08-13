@@ -9,6 +9,16 @@ export const projects: Project[] = [
         description: "Coming Soon",
         altText: "Coming Soon"
     },
+
+    {
+        href: "#",
+        backgroundImage: "",
+        title: "Smart Basketball",
+        tag: "Verilog",
+        description: "Coming Soon",
+        altText: "Coming Soon"
+    },
+
     {
         href: "#",
         backgroundImage: "",

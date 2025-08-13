@@ -5,7 +5,7 @@ interface SectionTitleProps {
 function SectionTitle({section}:SectionTitleProps) {
 
     return (
-        <p className="text-[#f6f5ef] text-[90px] font-medium font-alexandria uppercase">{section}</p>
+        <p className="text-[#f6f5ef] text-[90px] font-semibold font-alexandria uppercase">{section}</p>
     )
   }
   
