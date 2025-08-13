@@ -3,6 +3,7 @@
 
 html {
   background-color: #C84E00;
+  scroll-behavior: smooth;
 }
 
 :root {

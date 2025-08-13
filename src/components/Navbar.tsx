@@ -32,7 +32,7 @@ export default function Navbar() {
 
       <div className="flex justify-between items-center p-8 bg-transparent fixed w-full z-50">
       <div
-          className="uppercase hover:scale-110 duration-200 ease-in-out cursor-pointer flex items-center gap-2"
+          className="text-2xl uppercase hover:scale-110 duration-200 ease-in-out cursor-pointer flex items-center gap-2 ml-2"
           onClick={() => handleScroll(navItemStar.targetId)}
         >
           {navItemStar.icon && <FontAwesomeIcon icon={navItemStar.icon} className="fa-lg" />}

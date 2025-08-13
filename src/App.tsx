@@ -5,13 +5,13 @@ import Experience from './sections/Experience.tsx'
 
 function App() {
   return (
-    <>
+    <div>
       <NavBar></NavBar>
-      <Home></Home>
-      <Projects></Projects>
-      <Experience></Experience>
+      <div id="home"><Home/></div>
+      <div id="projects"><Projects/></div>
+      <div id="experience"><Experience/></div>
       
-    </>
+    </div>
   )
 }
 
