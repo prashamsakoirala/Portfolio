@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
     href: string;
     backgroundImage: string;
     title: string;
