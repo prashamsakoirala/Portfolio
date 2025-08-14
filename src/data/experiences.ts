@@ -7,9 +7,9 @@ export const experiences: Experience[] = [
     period: "Summer '25",
     role: 'Embedded Systems Intern',
     bullets: [
-      'Engineered a fully interoperable Modbus TCP communication device on a microcontroller-based embedded platform supporting all standard register types, enabling seamless integration with any third-party Modbus client while achieving 100% test coverage via comprehensive black-box testing.',
-      'Designed and implemented an abstracted, multi-protocol network layer and a high-performance Modbus server that accurately parses requests, executes register operations, and returns protocol-compliant responses, ensuring robust communication over both Ethernet and Wi-Fi networks.',
-      'Enhanced user experience and maintainability by applying MVC architecture to integrate a TFT display with event-driven controls, real-time serial output visualization, and UI layouts designed with Figma, delivering intuitive device management adaptable across diverse client environments.'
+      'Built a Modbus TCP device on a microcontroller platform supporting all standard register types, achieving 100% test coverage via black-box testing.',
+      'Developed a multi-protocol network layer and high-performance Modbus server for robust Ethernet and Wi-Fi communication.',
+      'Integrated a TFT display using MVC architecture with event-driven controls, real-time serial output, and Figma-designed layouts for intuitive device management.'
     ]
   },
   {
@@ -18,9 +18,9 @@ export const experiences: Experience[] = [
     period: "Summer '24",
     role: 'Engineering Intern',
     bullets: [
-      'Developed an automated notification system using React.js, Python, and SQL to flag units on hold over 24 hours, helping engineers prioritize urgent tasks and improve production efficiency, reducing lot tracking time by 70%.',
-      'Expanded and organized the internal knowledge base and training materials on semiconductor fabrication and wafer process flows, speeding up onboarding and improving engineer understanding.',
-      'Improved product quality and data reliability by monitoring device lifecycles, mapping unique identifiers across processes, and identifying data split points to prevent information loss.',
+      'Created a React.js/Python/SQL notification system flagging delayed units, cutting lot tracking time by 70%.',
+      'Expanded internal knowledge base and training materials for semiconductor fabrication and wafer processes.',
+      'Improved data reliability by mapping identifiers, monitoring lifecycles, and identifying split points to prevent data loss.'
     ]
   },
   {
@@ -29,10 +29,10 @@ export const experiences: Experience[] = [
     period: "Summer '23",
     role: 'Software Engineering Intern',
     bullets: [
-      'Leveraged advanced Python libraries, including Pandas, GeoPandas, and Holoviews, to develop an interactive dashboard for Duke’s Nicholas School of the Environment, enabling real-time visualization of malaria outbreaks across Peru',
-      'Conducted analysis on over 60,000 rows of time series data, identifying correlations between climate patterns and malaria outbreaks to enhance predictive modeling for future outbreaks',
-      'Designed a dynamic district-level map with interactive filters, enabling researchers to track and analyze malaria outbreaks across years and regions',
-      'Collaborated with Duke researchers in biweekly meetings to align with research goals and deliver actionable insights supporting ongoing studies'
+      'Developed an interactive dashboard with Pandas, GeoPandas, and Holoviews to visualize malaria outbreaks in Peru.',
+      'Analyzed 60,000+ time-series records to correlate climate trends with outbreak patterns.',
+      'Designed an interactive district-level map with filters for year and region analysis.',
+      'Collaborated with researchers to align tools with study objectives and deliver actionable insights.'
     ]    
-  }
+  }  
 ]

@@ -1,9 +1,9 @@
 import SectionTitle from '../components/SectionTitle.tsx';
 import { useState } from 'react';
-import { experiences } from '../data/experiences.ts'; // Import your Experience[] array
+import { experiences } from '../data/experiences.ts';
 
 function Experience() {
-  const [activeIndex, setActiveIndex] = useState(0); // use index instead of key
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   
   const current = experiences[activeIndex];
