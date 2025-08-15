@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import audioFile from '../assets/prashamsa.mp3';
-import resume from '../assets/Koirala_Resume.pdf';
+import resume from '../assets/KoiralaResume.pdf';
 
 
 function Home() {
